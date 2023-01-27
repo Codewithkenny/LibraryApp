@@ -1,3 +1,4 @@
+require("dotenv").config()
 const path = require('path');
 const express = require("express");
 const mongoose = require("mongoose");
@@ -22,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 // connect to database and start up server
-const dbURI = "mongodb://127.0.0.1:27017/librarydb";
+const dbURI = process.env.DB_URI;
 const port = 3007;
 
 mongoose
