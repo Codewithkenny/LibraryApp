@@ -7,10 +7,25 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.8.2",
     "validator": "^13.7.0",
-      "*.ejs" : "html",
-        "*.js": "html"
-  }
+    "*.ejs": "html",
+    "*.js": "html"
+  },
+  "name": "libraryapp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codewithkenny/LibraryApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Codewithkenny/LibraryApp/issues"
+  },
+  "homepage": "https://github.com/Codewithkenny/LibraryApp#readme",
+  "description": ""
 }
-
-
-
