@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/header.ejs') %>
+
+    <body>
+        <label for="">
+            <h2>CREATE BOOKS SECTION</h2>
+        </label>
+        <fieldset class="create-book-content">
+            <form action="" method="POST">
+                <label for="title">Book Title</label>
+                <input type="text" id="book_title" name="book_title" required>
+
+                <label for="text">Book Author:</label>
+                <input type="text" id="book_author" name="book_author" required>
+
+                <label for="body">Book Publication Year:</label>
+                <input type="number" id="publication_year" name="publication_year" required>
+
+                <button class="btn-5">Add Book</button>
+            </form>
+        </fieldset>
+
+        <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

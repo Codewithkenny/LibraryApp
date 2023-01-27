@@ -1,0 +1,56 @@
+<%- include('partials/header') -%>
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <section>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../public/images/lib-2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../public/images/lib-3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../public/images/lib.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Main Banner Area End ***** -->
+
+
+
+
+    <div class="book content">
+        <h2>All Books</h2>
+        <% if (books.length> 0) { %>
+            <% books.forEach(book=> {%>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="images/lionandwitch.jpg" alt="Narnia">
+                        <a class="allbook" href="/book/<%=book._id %>">
+                            <h3 class="book_title">
+                                <%= book.book_title %>
+                            </h3>
+                        </a>
+
+                        <p class="book_author">
+                            <%= book.book_author %>
+                        </p>
+                        <p class="publication_year">
+                            <%= book.publication_year %>
+                        </p>
+                        <a href="/borrow/<%=book._id%>" class="lib-btn">borrow</a>
+                        <button type="submit" class="lib-btn">return</button>
+                    </div>
+            </div>
+
+                <% }) %>
+                    <% } else { %>
+                        <p>There are no books to display...</p>
+                        <% } %>
+
+    </div>
+
+
+    <%- include('partials/footer'); -%>
